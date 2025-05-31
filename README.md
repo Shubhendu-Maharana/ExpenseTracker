@@ -1,97 +1,115 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 📱 Expense Tracker App
 
-# Getting Started
+A simple yet powerful **React Native Expense Tracker** that helps users keep track of their daily expenses with a clean and intuitive UI. The app supports adding, viewing, and visualizing expenses, and stores data locally using `AsyncStorage`.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 🚀 Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+* ➕ **Add Expense**: Input amount, category, date, and payment type
+* 📋 **View Expenses**: Scrollable list of recent transactions
+* 📊 **Income vs Spent Chart**: Doughnut chart visualization using `react-native-pie-chart`
+* 💾 **Local Storage**: Persistent data using `AsyncStorage`
+* 💡 **Minimal UI**: Clean and modern design for better user experience
+* 📱 **Optimized for 64-bit**: Builds only for 64-bit devices
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
 
-```sh
-# Using npm
-npm start
+## 📷 Screenshots
 
-# OR using Yarn
-yarn start
+| Home Screen                   | Add Expense                 |
+| ----------------------------- | --------------------------- |
+| ![home](screenshots/home.png) | ![add](screenshots/add.png) |
+
+---
+
+## 🛠️ Tech Stack
+
+* [React Native](https://reactnative.dev/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
+* [react-native-pie-chart](https://www.npmjs.com/package/react-native-pie-chart)
+* [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/expense-tracker-app.git
+cd expense-tracker-app
+npm install
+npx pod-install
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## ▶️ Run the App
 
 ### Android
 
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```bash
+npx react-native run-android
 ```
 
-### iOS
+### iOS (Mac only)
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+npx react-native run-ios
 ```
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
+## 🧪 Build APK (64-bit only)
+
+```bash
+cd android
+./gradlew clean
+./gradlew assembleRelease
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+Output APK: `android/app/build/outputs/apk/release/app-release.apk`
 
-```sh
-# Using npm
-npm run ios
+---
 
-# OR using Yarn
-yarn ios
+## 📁 Project Structure
+
+```
+/expense-tracker-app
+├── /android
+├── /ios
+├── /src
+|   ├── /components
+|   |   ├── AddTransactionModal.tsx
+|   |   ├── PaymentTypeOption.tsx
+|   |   ├── TabButton.tsx
+|   |   ├── TransactionItem.tsx
+|   |   └── TransactionModal.tsx
+|   ├── /screens
+|   │   ├── HomeScreen.tsx
+|   │   └── WelcomeScreen.tsx
+|   ├── /utils
+|   │   ├── getEmoji.tsx
+|   │   └── helperFunctions.tsx
+|   ├── App.tsx
+└── README.md
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🙌 Acknowledgements
 
-## Step 3: Modify your app
+* Icons by [Feather Icons](https://feathericons.com) and [Ionicons](https://ionic.io/ionicons)
+* Inspired by many open-source finance apps and UI kits
 
-Now that you have successfully run the app, let's make changes!
+---
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 👤 Author
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+**Shubhendu Maharana**
+MCA Student @ Odisha University of Technology and Research
+[LinkedIn](https://www.linkedin.com/in/shubhendu-maharana) | [GitHub](https://github.com/Shubhendu-Maharana)
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+> Feel free to contribute or suggest improvements!
